@@ -4,12 +4,21 @@
 
 
 $(document).ready(function() {
-  const API_KEY = "f33d629e08ad7176b09ffa1cda098180";
+const API_KEY = "f33d629e08ad7176b09ffa1cda098180";
 
   $("#search-btn").click(function() {
     var search = $("#search").val();
-    console.log(search);
+    console.log("done1");
     Trackster.searchTracksByTitle(search);
+    console.log("done2");
+  });
+
+  $.ajax({
+    url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + search + '&api_key=' + API_KEY + '&format=json',
+    datatype: 'jsonp',
+    success: function(data) {
+      console.log(data);
+    }
   });
 
 
@@ -29,13 +38,7 @@ Trackster.renderTracks = function(tracks) {
   Render the tracks given in the API query response.
 */
 Trackster.searchTracksByTitle = function(title) {
-  $.ajax({
-    url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + + $search.val() + '&api_key=' + API_KEY + '&format=json',
-    datatype: 'jsonp',
-    success: function(data) {
-      console.log(data);
-    }
-  });
-
+  console.log("done3");
+  console.log("done4");
 };
 });

@@ -1,3 +1,30 @@
-/*
-  Custom styles for Trackster App
-*/
+html {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  color: rgb(74, 74, 74);
+}
+
+.logo {
+  font-family: Righteous;
+  font-size: 2.5rem;
+  color: rgb(255, 0, 171);
+}
+
+.top-banner {
+  background-color: rgb(35, 2, 63);
+  height: 7.5rem;
+}
+
+#search {
+  border-radius: 50px;
+}
+
+.btn-default {
+  border-radius: 20px;
+  width: 75%;
+}
+
+.lt-purple {
+  background-color: rgb(255, 102, 204);
+  color: rgb(35, 2, 63);
+}
